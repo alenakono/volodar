@@ -1,0 +1,18 @@
+.wrapper{
+    overflow: hidden;
+    min-height: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+.container{
+    max-width: $container-width;
+    margin: 0 auto;
+    @include media-laptop{
+        padding: 0 27px;
+    }
+    @include media-big-mobile{
+        padding: 0 19px;
+    }
+    
+}

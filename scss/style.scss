@@ -1,0 +1,92 @@
+@import "./fonts";
+@import "./null";
+@import "./const";
+@import "./mixins";
+@import "./placeholder";
+@import "./layouts/assortment";
+@import "./layouts/_header";
+@import "./layouts/_map";
+@import "./layouts/_prepack";
+@import "./layouts/_steps";
+@import "./layouts/_top";
+@import "./layouts/_wrapper";
+@import "./layouts/application";
+@import "./layouts/footer";
+@import "./layouts/top-slider";
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@500;600;700;800&display=swap');
+
+
+html{
+    font-size: 10px;
+}
+body{
+    font-family: "Mulish",Verdana, sans-serif;
+    font-weight: 700;
+    font-size: 1.6rem;
+    color: $color-main;
+}
+body._lock{
+    overflow: hidden;
+}
+.button_colored{
+    background-color: $color-brand;
+    color: $color-white;
+    font-weight: 800;
+    font-size: 1.8rem;
+    line-height: 120%;
+    text-align: center;
+    padding: 16px 26px;
+    box-shadow: 13px 4px 30px rgba(203, 173, 149, 0.45);
+    border-radius: 6px;
+    cursor: pointer;
+}
+.button_colored._unactive{
+    opacity: 0.4;
+}
+.button_invisible{
+    color: $color-brand;
+    svg{
+        margin-left: 4px;
+    }
+}
+.button_brown{
+    color: $color-main;
+}
+h1{
+    font-weight: 800;
+    font-size: 5.5rem;
+    line-height: 95%;
+    @include media-big-mobile{
+        font-size: 2.6rem;
+        font-weight: 700;
+    }
+
+}
+h2{
+    font-weight: 800;
+    font-size: 4.4rem;
+    line-height: 100%;
+}
+h3{
+    font-size: 3.6rem;
+    line-height: 100%;
+    font-weight: 800;
+    @include media-big-mobile{
+        font-size: 2.6rem;
+        font-weight: 700;
+    }
+}
+h4{
+    font-size: 2.6rem;
+    line-height: 110%;
+}
+h5{
+    font-weight: 600;
+    font-size: 2.2rem;
+    line-height: 120%;
+}
+h6{
+    font-weight: 500;
+    font-size: 1.8rem;
+    line-height: 120%;
+}

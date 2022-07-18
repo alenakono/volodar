@@ -1,0 +1,185 @@
+.application{
+    margin: 0 auto;
+    background-color: $color-main;
+    position: relative;
+    padding: 80px 0;
+    color: #F4EEE5;
+    @include media-laptop{
+        padding: 53px 75px;
+    }
+    @include media-big-mobile{
+        padding: 35px 20px 100px 20px;
+    }
+}
+.application_bg_left, .application_bg_right{
+    position: absolute;
+    bottom: 0;
+    img{
+        width: 100%;
+    }
+    @include media-big-mobile{
+        display: none;
+    }
+    
+}
+.application_bg_left{
+    left: 0;
+    @include media-laptop{
+        max-width: 238px;
+        
+    }
+}
+.application_bg_right{
+    right: 0;
+    @include media-laptop{
+        max-width: 293px;
+    }
+}
+.application-layout-2-columns{
+    display: flex;
+    justify-content: center;
+    @include media-laptop{
+        flex-direction: column;
+    }
+    
+}
+.application-info{
+    max-width: 340px;
+    margin-right: 149px;
+    .application-info__title{
+        margin-bottom: 32px;
+        
+    }
+    .application-info__text{
+        @include media-laptop{
+            max-width: 317px;
+        }
+    }
+    .application-info__text._bottom{
+        margin: 42px 0 8px 0;
+    }
+    .application-info__number{
+        color: $color-brand;
+        font-size: 2.6rem;
+        line-height: 110%;
+    }
+    @include media-laptop{
+        max-width: 100%;
+        margin: 0 0 75px 0;
+        display: flex;
+        justify-content: space-between;
+    }
+    @include media-big-mobile{
+        display: block;
+        margin: 0 0 60px 0;
+    }
+}
+.application-form-layout{
+    display: flex;
+    @media (max-width:900px) {
+        display: block;
+    }
+    
+}
+.application-form__column{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.application-form__input{
+    margin-bottom: 32px;
+    background-color: #F2EDE6;
+    max-width: 392px;
+    font-size: 2.2rem;
+    line-height: 120%;
+    font-weight: 600;
+    padding: 16px 40px;
+    color: $color-main;
+    border-radius: 4px;
+    ::placeholder{
+        opacity: 0.5;
+    }
+    @include media-big-mobile{
+        max-width: 100%;
+        width: 100%;
+        margin-bottom: 16px;
+    }
+}
+
+.application-form__column textarea{
+    width: 430px;
+    height: 238px;
+    background-color: #F2EDE6;
+    font-size: 2.2rem;
+    line-height: 120%;
+    font-weight: 600;
+    padding: 16px 40px;
+    color: $color-main;
+    border-radius: 4px;
+    margin-left: 43px;
+    @media (max-width:900px) {
+        margin-left: 0;
+        width: 100%;
+        margin-bottom: 24px;
+    }
+}
+.application__button{
+    font-weight: 800;
+    line-height: 120%;
+    margin-top: 50px;
+    padding: 16px 51px;
+    box-shadow: 13px 4px 30px rgba(203, 173, 149, 0.45);
+    @include media-laptop{
+        margin-top: 47px;
+    }
+    @include media-big-mobile{
+        width: 100%;
+    }
+}
+.application-checkbox{
+    padding-left: 50px;
+    color: $color-white;
+    position: relative;
+    cursor:pointer;
+    line-height: 120%;
+    .checkbox__text_underline{
+        text-decoration: underline;
+    }
+    input{
+        display: none;
+    }
+    
+}
+.application-send{
+    @include media-laptop{
+        max-width: 596px;
+        margin: 0 auto;
+        text-align: center;
+    }
+}
+.application-checkbox:checked,
+.application-checkbox::before{
+    content: '';
+    width: 24px;
+    height: 24px;
+    border: 2px solid #FFFFFF;
+    border-radius: 4px;
+    background-color: $color-brand;
+    position: absolute;
+    left: 0;
+    top:0;
+}
+.application-checkbox::after{
+    content: '';
+    position: absolute;
+    top:0;
+    left:0;
+    background-image: url(../images/icons/checkmark.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 24px;
+    height: 24px;
+}
+
+

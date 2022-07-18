@@ -1,0 +1,81 @@
+%transition{
+    transition: all 0.5s ease-in-out;
+}
+%hover__button_colored{
+    box-shadow: 3px 4px 30px rgba(203, 173, 149, 0.8), 13px 4px 30px rgba(203, 173, 149, 0.45);
+    cursor: pointer;
+}
+%hover__button_invisible{
+    color: #664B42;
+}
+%hover__button_brown{
+    color: $color-brand;
+}
+%hover__column_colored{
+    .assortment__text{
+        color: $color-brand;
+    }
+    
+    svg{
+        display: inline-block;
+    }
+}
+
+.button_colored {
+    @extend %transition;
+    &:hover{
+        @extend %hover__button_colored;
+    }
+}
+.button_invisible{
+    @extend %transition;
+    &:hover{
+        @extend %hover__button_invisible;
+    }
+    svg path:hover { 
+        fill: #111;
+    }
+}
+.button_brown{
+    @extend %transition;
+    &:hover{
+        @extend %hover__button_brown;
+    }
+    svg path:hover { 
+        fill: $color-brand;
+    }
+}
+.assortment__column{
+    @extend %transition;
+    &:hover,&:focus{
+        @extend %hover__column_colored;
+    }
+}
+.header-bottom__item{
+    @extend %transition;
+    &:hover{
+        color: $color-brand;
+        border-bottom: 2px solid $color-brand;
+    }
+    .header__sublist{
+        color: $color-main;
+    }
+
+}
+.header-bottom{
+    @extend %transition;
+    &:hover{
+        background-color: #F7F7F7;
+        border-radius: 8px;
+    }
+    
+}
+.header__sublink{
+    @extend %transition;
+    &:hover{
+        color: $color-brand;
+        .header__sublink_arrow{
+            display: inline-block;
+        }
+    }
+}

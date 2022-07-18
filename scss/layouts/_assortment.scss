@@ -1,0 +1,84 @@
+@import "../mixins";
+
+
+.layout-5-column{
+    @include columns($width: 18%);
+    text-align: center;
+    margin-top: -109px;
+    @include media-laptop{
+        @include columns($width: 30%);
+        justify-content: center;
+    }
+    @include media-big-mobile{
+        @include columns($width: 40%);
+        justify-content: space-around
+    }
+    @media (max-width: 330px) {
+        display: block;
+        
+    }
+    
+}
+.assortment__column{
+    background-image: url(../images/column_bg.jpg);
+    border-radius: 8px;
+    padding: 0 0 32px 0;
+    cursor: pointer;
+    @include media-laptop{
+        margin: 0 30px 30px 0;
+    }
+    @include media-big-mobile{
+        margin: 0 24px 24px 0;
+        padding: 0 9px 9px 9px;
+        max-width: 164px;
+        
+    }
+    img{
+        margin: -30px 0 32px 0;
+        max-width: 100%;
+        
+    }
+    svg{
+        display: none;
+        margin-left: 15px;
+        width: 40px;
+    }
+    @media (max-width: 380px) {
+        width: 130px;
+        
+    }
+    
+}
+.assortment__column._active{
+    .assortment__text{
+        color: $color-brand;
+        @include media-big-mobile{
+            color: $color-main;
+        }
+    }
+    svg{
+        display: block;
+    }
+    @include media-big-mobile{
+        svg{
+            display: none;
+        }
+    }
+}
+
+.assortment__text{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #1C1616;
+    h4{
+        @include media-big-mobile{
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+    }
+    
+    
+    
+    
+}

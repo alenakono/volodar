@@ -1,0 +1,74 @@
+.map{
+    padding: 47px 0;
+    max-width: $content-width;
+    margin: 0 auto;
+    background-image: url(../images/Frame.png);
+    @include media-big-mobile{
+        padding: 66px 10px;
+    }
+
+}
+.map__img{
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    
+}
+.map__bg{
+    max-width: 1205px;
+    margin: 0 auto;
+    img{
+        width: 100%;
+    }
+}
+.map__info{
+    position: absolute;
+    font-size: 2.6rem;
+    line-height: 123%;
+    cursor: pointer;
+    img{
+        margin-right: 10px;
+    }
+    @include media-big-mobile{
+        font-size: 1.8rem;
+    }
+}
+
+.map__text._russia{
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -30%);
+}
+.map__text._belarus{
+    position: absolute;
+    top: 44%;
+    left: 23%;
+    transform: translate(-23%, -45%);
+    @include media-laptop{
+        top: 45%;
+        left:5%;
+    }
+}
+.map__text._iran{
+    position: absolute;
+    top: 68%;
+    left: 31%;
+    transform: translate(-50%, -50%);
+    @media (max-width:1200px) {
+        left: 25%;
+    }
+
+}
+.map__text._china{
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.map__text._vietnam{
+    position: absolute;
+    top: 95%;
+    left: 53%;
+    transform: translate(-50%, -50%);
+}

@@ -1,0 +1,20 @@
+@mixin columns ($width) {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    >*{
+        flex-basis: $width;
+    }
+}
+@mixin media-laptop{
+    @media(max-width: $container-width) { @content;}
+}
+@mixin media-tablet{
+    @media(max-width: $tablet-width) { @content;}
+}
+@mixin media-big-mobile{
+    @media(max-width: $mobile-big-width) { @content;}
+}
+@mixin media-mobile{
+    @media(max-width: $mobile-width) { @content;}
+}
